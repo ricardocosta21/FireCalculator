@@ -260,6 +260,7 @@ export class Main extends React.Component {
     // this.state.currencySymbol = global.MyVar;
   }
 
+
   formatNumber(number) {
     if (Platform.OS === 'android') {
       // only android needs polyfill
