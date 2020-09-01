@@ -77,9 +77,9 @@ let savedData = 0;
 
 let newSavingsValue = 0;
 
-// YellowBox.ignoreWarnings([
-//   'VirtualizedLists should never be nested', // TODO: Remove when fixed
-// ]);
+YellowBox.ignoreWarnings([
+  'VirtualizedLists should never be nested', // TODO: Remove when fixed
+]);
 
 YellowBox.ignoreWarnings(['Warning: componentWillReceiveProps']);
 
