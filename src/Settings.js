@@ -12,14 +12,14 @@ import {
   Text,
   View,
   TextInput,
-  FlatList,
-  Picker,
   Dimensions,
   ToastAndroid,
   YellowBox,
   TouchableOpacity,
   StatusBar,
 } from 'react-native';
+
+import {Picker} from '@react-native-community/picker';
 
 import {
   Container,
@@ -116,18 +116,6 @@ export default class Settings extends Component {
           </Header>
         </View>
 
-        {/* <View
-          style={{
-            backgroundColor: HARD_GREEN,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Button
-            onPress={() => this.props.navigation.navigate('Main')}
-            title="Go to Main"
-          />
-        </View> */}
-
         <View style={styles.settingsTextCenter}>
           <Title style={{color: 'black'}}>Choose a currency</Title>
           <Picker
@@ -143,17 +131,6 @@ export default class Settings extends Component {
             <Picker.Item label="€" value="EUR" />
           </Picker>
         </View>
-
-        {/* <ScrollView>
-            <FlatList
-              style={styles.flatList}
-              data={SettingsArray}
-              keyExtractor={(item, index) => 'key' + index}
-              renderItem={({item, index}) => (
-                <Text style={styles.flatListSettingsLeft}>{item}</Text>
-              )}
-            />
-          </ScrollView> */}
       </ImageBackground>
     );
   }

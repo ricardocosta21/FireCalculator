@@ -8,7 +8,7 @@
  */
 
 // import 'react-native-gesture-handler';
-import React, {Component} from 'react';
+import React from 'react';
 import CardView from 'react-native-cardview';
 import styles from '../style';
 
@@ -37,16 +37,10 @@ import {
   NavigationEvents,
 } from '@react-navigation/native';
 
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
-} from '@react-navigation/drawer';
+import {createDrawerNavigator, DrawerItem} from '@react-navigation/drawer';
 
 import {
   Platform,
-  Image,
   ScrollView,
   ToolbarAndroid,
   ImageBackground,
@@ -58,31 +52,17 @@ import {
   Dimensions,
   ToastAndroid,
   YellowBox,
-  TouchableOpacity,
   StatusBar,
 } from 'react-native';
-import {
-  Container,
-  Header,
-  Button,
-  Title,
-  Content,
-  Left,
-  Right,
-  Body,
-  // Icon
-} from 'native-base';
+import {Header, Button, Left, Right} from 'native-base';
 
 // 3rd party libraries
 import {Icon} from 'react-native-elements';
 
 const LIGHT_GREEN = '#ddfff6';
-const MEDIUM_GREEN = '#96ffe3';
-const HARD_GREEN = '#53d1af';
 const LIGHT_GRAY = '#ECECEC';
 const WHITE = '#FFFFFF';
-const TRANSPARENT = 'rgba(52, 52, 52, alpha)';
-const SEMITRANS = '#20111111';
+// const TRANSPARENT = 'rgba(52, 52, 52, alpha)';
 const ANDROIDTRANS = '#FF000000';
 
 let deviceWidth = Dimensions.get('window').width;
@@ -97,17 +77,17 @@ let savedData = 0;
 
 let newSavingsValue = 0;
 
-YellowBox.ignoreWarnings([
-  'VirtualizedLists should never be nested', // TODO: Remove when fixed
-]);
+// YellowBox.ignoreWarnings([
+//   'VirtualizedLists should never be nested', // TODO: Remove when fixed
+// ]);
 
 YellowBox.ignoreWarnings(['Warning: componentWillReceiveProps']);
 
 YellowBox.ignoreWarnings(['Warning: componentWillMount']);
 
-const testSetTransparent = () => {
-  changeNavigationBarColor('transparent', true);
-};
+// const testSetTransparent = () => {
+//   changeNavigationBarColor('transparent', true);
+// };
 
 const DataSchema = {
   name: 'Data',
@@ -164,20 +144,10 @@ export class Main extends React.Component {
       isFocused: false,
       currencySymbol: 'GBP',
       percentageSymbol: '%',
-
       fireDataArray: [],
-
       isLoading: true,
     };
   }
-
-  // componentWillUnmount() {
-  //   //Close the realm if there is one open.
-  //   // const {realm} = this.state;
-  //   // if (realm !== null) {
-  //   //   realm.close();
-  //   // }
-  // }
 
   saveData = () => {
     Realm.open({schema: [DataSchema]}).then(realm => {
@@ -195,7 +165,7 @@ export class Main extends React.Component {
         });
       });
     });
-    if (Platform.OS == 'ios') {
+    if (Platform.OS === 'ios') {
       alert('Config Saved!');
     } else {
       ToastAndroid.showWithGravityAndOffset(
@@ -259,7 +229,6 @@ export class Main extends React.Component {
   callback() {
     // this.state.currencySymbol = global.MyVar;
   }
-
 
   formatNumber(number) {
     if (Platform.OS === 'android') {
@@ -404,25 +373,9 @@ export class Main extends React.Component {
     if (data !== null) {
       this.setState({isLoading: false});
     }
-
-    //global.MyVar = this.state.currencySymbol;
   }
 
-  //  GoToButton({ screenName }) {
-  //   const navigation = useNavigation();
-
-  //   return (
-  //     <Button
-  //       title={`Go to ${screenName}`}
-  //       onPress={() => navigation.navigate(screenName)}
-  //     />
-  //   );
-  // }
-
   render() {
-    const {isFocused} = this.state;
-    let colors = [WHITE, LIGHT_GRAY];
-
     // Loads splash screen
     if (this.state.isLoading) {
       return <SplashScreenComponent />;
@@ -448,9 +401,6 @@ export class Main extends React.Component {
                 <Icon name="menu" color="#000000" />
               </Button>
             </Left>
-            {/* <Body>
-              <Title style={styles.h2}>FIRE CALCULATOR</Title>
-            </Body> */}
             <Right>
               <Icon
                 name="save"
@@ -662,7 +612,6 @@ export class Main extends React.Component {
                         flexDirection: 'row',
                         paddingTop: 15,
                         paddingBottom: 15,
-                        //backgroundColor: colors[index % colors.length],
                       }}>
                       <Text style={styles.flatListItemLeft}>{item.index}</Text>
                       <Text style={styles.flatListItemCenter}>{item.age}</Text>
@@ -681,20 +630,9 @@ export class Main extends React.Component {
   }
 }
 
-// function Feed({ navigation }) {
-//   return (
-//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//       <Text>Feed Screen</Text>
-//       <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
-//       <Button title="Toggle drawer" onPress={() => navigation.toggleDrawer()} />
-//     </View>
-//   );
-// }
-
 function CustomDrawerContent(props) {
   return (
     <View style={[styles.drawerContainer]}>
-      {/* <DrawerItemList {...props} /> */}
       <DrawerItem
         label="Main"
         onPress={() => {

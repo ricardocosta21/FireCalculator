@@ -252,10 +252,12 @@ PODS:
     - ReactCommon/callinvoker (= 0.62.2)
   - ReactNativeART (1.1.2):
     - React
-  - RealmJS (4.0.0-beta.2):
+  - RealmJS (6.1.0):
     - GCDWebServer
     - React
   - RNCMaskedView (0.1.6):
+    - React
+  - RNCPicker (1.6.6):
     - React
   - RNGestureHandler (1.6.0):
     - React
@@ -301,6 +303,7 @@ DEPENDENCIES:
   - "ReactNativeART (from `../node_modules/@react-native-community/art`)"
   - RealmJS (from `../node_modules/realm`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
+  - "RNCPicker (from `../node_modules/@react-native-community/picker`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -373,6 +376,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/realm"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
+  RNCPicker:
+    :path: "../node_modules/@react-native-community/picker"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
@@ -401,8 +406,8 @@ SPEC CHECKSUMS:
   React-jsi: b6dc94a6a12ff98e8877287a0b7620d365201161
   React-jsiexecutor: 1540d1c01bb493ae3124ed83351b1b6a155db7da
   React-jsinspector: 512e560d0e985d0e8c479a54a4e5c147a9c83493
-  react-native-safe-area-context: 8260e5157617df4b72865f44006797f895b2ada7
-  react-native-slider: b2f361499888302147205f17f6fffa921a7bda70
+  react-native-safe-area-context: e200d4433aba6b7e60b52da5f37af11f7a0b0392
+  react-native-slider: 3a1cfd00c9c31068251b536822f7192e8d1d6b6f
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   React-RCTActionSheet: f41ea8a811aac770e0cc6e0ad6b270c644ea8b7c
   React-RCTAnimation: 49ab98b1c1ff4445148b72a3d61554138565bad0
@@ -414,15 +419,16 @@ SPEC CHECKSUMS:
   React-RCTText: fae545b10cfdb3d247c36c56f61a94cfd6dba41d
   React-RCTVibration: 4356114dbcba4ce66991096e51a66e61eda51256
   ReactCommon: ed4e11d27609d571e7eee8b65548efc191116eb3
-  ReactNativeART: c496c53089b3149663215d74d6f1adb3a62e07eb
-  RealmJS: 6d20849a7beffa2dc425ee325f24f0366ee774b6
-  RNCMaskedView: e5b99bc191945f157adeede68da9d424462de177
+  ReactNativeART: c580fba2f7d188d8fa4418ce78db8130654ed10f
+  RealmJS: c8645e0d65b676780f7e6c393d327527a2eb15e8
+  RNCMaskedView: a88953beefbd347a29072d9eba90e42945fe291e
+  RNCPicker: 494015f2b7ec4bee5484b6f235aa19691426dcdb
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNScreens: c596b54c3ab63b0390aa3cb081edd438147d40ae
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
 
-PODFILE CHECKSUM: db618cad4d09fb225c2600d9538d3a8612ef59f3
+PODFILE CHECKSUM: 53d21e54f15ef944031685cc327bd4aaa0001688
 
 COCOAPODS: 1.9.3
