@@ -4,6 +4,7 @@ import android.app.Application;
 
 import io.realm.react.RealmReactPackage;
 import com.facebook.react.ReactApplication;
+import io.realm.react.RealmReactPackage;
 import com.reactnativecommunity.picker.RNCPickerPackage;
 import com.thebylito.navigationbarcolor.NavigationBarColorPackage;
 import io.realm.react.RealmReactPackage;
@@ -34,6 +35,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RealmReactPackage(),
             new RNCPickerPackage(),
             new NavigationBarColorPackage(),
             new RealmReactPackage(),

@@ -104,14 +104,14 @@ export default class Settings extends Component {
             </Body>
 
             <Right>
-              <Icon
+              {/* <Icon
                 name="save"
                 type="font-awesome"
                 color="#000000"
                 reverseColor="false"
                 iconStyle={styles.headerIcon}
                 onPress={() => this.saveData()}
-              />
+              /> */}
             </Right>
           </Header>
         </View>
