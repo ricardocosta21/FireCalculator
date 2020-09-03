@@ -24,7 +24,7 @@ const LIGHT_GRAY = '#ECECEC';
 const WHITE = '#FFFFFF';
 const TRANSPARENT = 'rgba(52, 52, 52, alpha)';
 
-const appVersion = '1.3';
+const appVersion = '1.1';
 
 export default class About extends Component {
   render() {

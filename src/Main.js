@@ -62,16 +62,16 @@ import {Icon} from 'react-native-elements';
 const LIGHT_GREEN = '#ddfff6';
 const LIGHT_GRAY = '#ECECEC';
 const WHITE = '#FFFFFF';
-// const TRANSPARENT = 'rgba(52, 52, 52, alpha)';
+
 const ANDROIDTRANS = '#FF000000';
 
 let deviceWidth = Dimensions.get('window').width;
 
-let maxInvestmentsValue = 500000;
+let maxInvestmentsValue = 1000000;
 
-let maxIncomeValue = 250000;
+let maxIncomeValue = 500000;
 
-let maxRetSpendValue = 150000;
+let maxRetSpendValue = 250000;
 
 let savedData = 0;
 
